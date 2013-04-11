@@ -1,13 +1,6 @@
 (function() {
-  var whereTheMagicHappens;
-
-  if (location.hostname === 'localhost') {
-    whereTheMagicHappens = "http://admin.api.pocket.dev";
-  } else {
-    whereTheMagicHappens = location.protocol + "//" + location.hostname.replace(/^admin/, "admin.api");
-  }
-
-  window.hoodie = new Hoodie(whereTheMagicHappens);
+  
+  window.hoodie = new Hoodie("/_api");
 
   window.hoodie.extend("admin", Hoodie.Admin);
 
